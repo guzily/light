@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.light {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.controls {
+    position: fixed;
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.control-group {
+    margin: 20px 0;
+}
+
+label {
+    color: white;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 280px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 添加滑块激活状态的效果 */
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+} 
